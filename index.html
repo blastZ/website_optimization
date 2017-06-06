@@ -8,10 +8,21 @@
     <title>Cameron Pittman: Portfolio</title>
 
     <!-- 嗯，web 字体对速度的影响有多大呢？测量一下吧 -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" media="none" onload="if(media!='all') media='all'">
-
-    <link href="css/style.css" rel="stylesheet" media="none" onload="if(media!='all') media='all'">
-    <link href="css/print.css" rel="stylesheet" media="none" onload="if(media!='all') media='all'">
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Open Sans:400', 'Open Sans:700']
+            }
+        };
+        (function(d){
+            var wf = d.createElement('script'), s = d.script[0];
+            wf.src = 'js/webfontloader.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/print.css" rel="stylesheet" media="print">
 
     <script>
       (function(w,g){w['GoogleAnalyticsObject']=g;
@@ -21,7 +32,7 @@
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
     </script>
-    <script src="http://www.google-analytics.com/analytics.js" async="async"></script>
+    <script async src="http://www.google-analytics.com/analytics.js"></script>
     <script async src="js/perfmatters.js"></script>
   </head>
 
@@ -57,7 +68,7 @@
           </li>
 
           <li>
-            <img style="width: 100px;" src="views/images/pizzeria.jpg">
+            <img style="width: 100px;" src="views/images/pizzeria.png">
             <a href="views/pizza.html">Cam's Pizzeria</a>
             <p>Who wants a performant pizza?</p>
           </li>

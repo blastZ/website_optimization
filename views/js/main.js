@@ -439,8 +439,9 @@ var resizePizzas = function(size) {
     // 遍历披萨的元素并改变它们的宽度
     function changePizzaSizes(size) {
         var newwidth = determineDx(size) + 'px';
-        for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
-            document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;
+        var thePizzaContainer = document.getElementsByClassName("randomPizzaContainer");
+        for (var i = 0; i < thePizzaContainer.length; i++) {
+            thePizzaContainer[i].style.width = newwidth;
         }
     }
 
